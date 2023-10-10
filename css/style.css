@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}h1,h2,h3,h4 {font-family: 'Poppins', sans-serif;}p,a {font-family: 'Roboto', sans-serif;}a{display: inline-block;}
+html{font-size: 62.5%;}
+h1 {
+  font-size: 2.85rem;
+  font-weight: bolder;
+}
+h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
+h3{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+p{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+a{
+  display: inline-block;
+  padding: 2px 3px;
+  font-size: 1.5rem;
+}
+/* -------uitility Class---------*/
+.container{
+  max-width: 1180px;
+  margin-inline: auto;
+}
+.btn{
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bolder;
+  background: #FF006B;
+  border-radius: 10px;
+  font-size: 2rem;
+  border: 2px solid #FF006B;
+  transition: all .2s ease;
+}
+.btn:hover{
+  background: transparent;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+}
+.btn2{
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bolder;
+  border-radius: 10px;
+  font-size: 2rem;
+  border: 1.5px solid #fff;
+  transition: all .2s ease;
+    
+}
+.btn2:hover {
+  background: #FF006B;
+  color: #Fff;
+  border: 2px solid #FF006B;
+}
+/* -------Header Css------- */
+header{
+/*   background: url(content://com.teejay.trebedit.fileprovider/external/Android/data/io.spck/files/My%20Advanture%20website/images/header-bg.png);*/
+  background: url(../images/header-bg.png);
+  width: 100Vw;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  
+}
+/* -style for navbar-*/
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: cenetr;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.navbar{
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+nav>ul>li:not(:last-child){
+  padding-right: 20px;
+}
+nav>ul>li>a{
+  color: whitesmoke;
+  transition: all .3s ease;
+}
+nav>ul>li>a:hover{
+  color: #FF006B;
+}
+/*  style for Logo  */
+.logo{
+  position: relative;
+  margin-left: 50px;
+}
+.headerContent{
+  display: grid;
+  place-items: center;
+}
+.headerContent>div>a:not(:last-child){
+  margin-right: 10px;
+}
+.headerContent>p{ 
+  color: #FFF;
+  font-size: 2rem;
+  padding: 0px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Style for the typewriter text */
+#typewriter-container{
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
+#typewriter-text {
+  font-family: "Poppins";
+  font-size: 3rem;
+  white-space: wrap;
+  overflow: hidden;
+  border-right: 1px solid #000;
+  display: inline-block;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: bolder;
+  text-align: center;
+  padding-inline: 20px;
+}
+header>nav>label{
+  position: absolute;
+  top: 59px;
+  right: 20px;
+}
+#ck{
+  position: absolute;
+  right:0;
+  display: none;
+}
+#toggle{
+  color: #fff;
+  position: absolute;
+  font-size: 3rem;
+  top: 50px;
+  display: none;
+}
+#crose{
+  display: none;
+}
+#ck:checked~ label #menu{
+  display: none;
+}
+#ck:checked~ label #crose{
+  display: block;
+}
+#ck:checked ~ .navbar{
+  left: 0%;
+}
+/* -----Evant section ----- */
+#evant{
+  width: 100%;
+  height: auto;
+  display: grid;
+  padding: 30px 50px;
+  background: #F6F6F6;
+  position: relative;
+}
+#evant>h1{
+  text-align: center;
+  margin-block: 50px;
+  position: relative;
+  padding-bottom: 2px;
+}
+#evant>h1::before{
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 1px;
+  background: #FF006B;
+  border: 3px solid #FF006b;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.eventContent{
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  padding-bottom: 30px;
+}
+.events{
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.eventImg{
+  width: 100%;
+  position: relative;
+}
+.eventImg img{
+  width: 100%;
+  height: auto;
+  transition: all .4s ease;
+  position: relative;
+  top: 0;
+  
+}
+.eventImg img:hover{
+  width: 100%;
+  box-shadow: 10px 10px 25px 2px #BBBBBB, -10px -10px 25px 2px #E1E1E1;
+  top: -9px;
+}
+.evantText{
+  display: grid;
+  place-items: center;
+  padding: 20px 30px;
+}
+.evantText p{
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+.evantText>a{
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+/* ---explore---- */
+.explore{
+  width: 100%;
+  background: url(../images/bg2.png);
+  height: 450px;
+  margin-block: 20px;
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+.explore h1{
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 800;
+  padding-block: 25px;
+  position: relative;
+}
+.explore h1::before{
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 1px;
+  background: #FF006D;
+  border: 3px solid #FF006B;
+  border-radius: 5px;
+  bottom: 23px;
+  left: 2px;
+}
+.explore p{
+  font-size: 2rem;
+  font-weight: 400;
+  color: whitesmoke;
+  padding-bottom: 25px;
+}
+/* ----  upComing css  ---- */
+.upComing{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-inline: 50px;
+  margin-block: 60px;
+  flex-wrap: wrap;
+}
+.upComing a:hover,.evants a:hover{
+  background: #7E0032;
+}
+.leftContent{
+  flex-basis: 50%;
+  padding-right: 20px;
+}
+.leftContent h1{
+  font-size: 3.5rem;
+  position: relative;
+}
+.leftContent h1::before{
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 1px;
+  background: #FF006B;
+  border: 3px solid #FF006b;
+  bottom: 0;
+  left: 2px;
+  border-radius: 5px;
+
+}
+.leftContent p{
+  padding-block: 20px;
+  font-size: 1.5rem;
+}
+.rightContent{
+  flex-basis: 50%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-row: repeat(2,1fr);
+  grid-gap: 10px;
+}
+.rightContent div img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  transition: all .3s ease;
+}
+.rightContent div img:hover{
+  width: 100%;
+  box-shadow: 1px 1px 20px 0px #f0f0f0, -1px -1px 20px 0px #f5f5f5;
+  top: -2px;
+}
+
+/* ---  footer  --- */
+footer{
+  background: #030022;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  color: #fff;
+}
+footer>div{
+  flex-basis: calc(100% / 3);
+  padding: 50px;
+  position: relative;
+  align-items: center;
+  min-height: 150px
+}
+footer>div:first-child >p{
+  position: absolute;
+  top: 100px;
+}
+footer>div:first-child img{
+  position: absolute;
+  top: 0;
+}
+footer>div:nth-child(2)>a{
+  color: #fff;
+  display: block;
+}
+footer>div:nth-child(3)>a{
+  color: #fff;
+  font-size: 3rem;
+  margin-right: 5px;
+  background: #414657;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.copyWrite{
+  flex: 3;
+  text-align: center;
+  background: #2D3057;
+  margin-bottom: 40px;
+  display: grid;
+  place-items: center;
+  height: 20px !important
+}
